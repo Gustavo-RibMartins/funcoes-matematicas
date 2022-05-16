@@ -42,9 +42,9 @@ int main() {
     }
 
     //Declaracao e atribuicao do vetor de inteiros
-    long int *VetInteiros = malloc(sizeof(int) * NumInteiros);
+    long int *VetInteiros = malloc(sizeof(long int) * NumInteiros);
     printf("Digite os valores de cada um dos inteiros: ");
-    for(int i=0; i<NumInteiros; i++){
+    for(int i = 0; i < NumInteiros; i++){
         scanf("%d", &VetInteiros[i]);
         // Valida se foi inserido um elemento < 1 no vetor
         if(VetInteiros[i] < 1){
