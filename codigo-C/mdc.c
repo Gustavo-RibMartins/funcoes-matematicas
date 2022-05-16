@@ -3,6 +3,9 @@
 int MaxDivComum (int NumInteiros, int *VetInteiros){
     int MaiorInteiro = 1;
     int MDC = 1;
+    if(NumInteiros == 1){
+        return VetInteiros[0];
+    }
     //Identifica o maior inteiro do vetor
     for(int i = 0; i < NumInteiros; i++){
         if(MaiorInteiro < VetInteiros[i]){
@@ -39,7 +42,7 @@ int main() {
     }
 
     //Declaracao e atribuicao do vetor de inteiros
-    int *VetInteiros = malloc(sizeof(int) * NumInteiros);
+    long int *VetInteiros = malloc(sizeof(int) * NumInteiros);
     printf("Digite os valores de cada um dos inteiros: ");
     for(int i=0; i<NumInteiros; i++){
         scanf("%d", &VetInteiros[i]);
@@ -53,8 +56,8 @@ int main() {
     //Calcula MDC
     MDC = MaxDivComum(NumInteiros, VetInteiros);
     free(VetInteiros);
-
+    
     printf("MDC = %d\n", MDC);
-
+    
     return 0;
 }
